@@ -1,0 +1,166 @@
+lbody {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.teddy-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
+.teddy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ear {
+  width: 60px;
+  height: 60px;
+  background-color: #d2691e;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ear-left {
+  top: 0;
+  left: -35px;
+}
+
+.ear-right {
+  top: 0;
+  right: -35px;
+}
+
+.face {
+  width: 140px;
+  height: 140px;
+  background-color: #d2691e;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eyes {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eye {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.nose {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  left: 55px;
+}
+
+.mouth {
+  width: 50px;
+  height: 25px;
+  border-bottom: 4px solid black;
+  position: absolute;
+  top: 110px;
+  left: 45px;
+  border-radius: 0 0 50px 50px;
+}
+
+.body {
+  width: 140px;
+  height: 180px;
+  background-color: #d2691e;
+  border-radius: 50px 50px 10px 10px;
+  position: absolute;
+  top: 140px;
+  left: 0;
+}
+
+.belly {
+  width: 100px;
+  height: 120px;
+  background-color: #f4a460;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.legs {
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.leg {
+  width: 60px;
+  height: 80px;
+  background-color: #d2691e;
+  border-radius: 50%;
+}
+
+.leg-left {
+  transform: rotate(20deg);
+}
+
+.leg-right {
+  transform: rotate(-20deg);
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.teddy:hover .ear-left,
+.teddy:hover .ear-right {
+  animation: wave 0.5s infinite;
+}
